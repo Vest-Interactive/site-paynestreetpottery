@@ -1,0 +1,215 @@
+
+/* ====================================================================
+ * Secondary-view
+ * ==================================================================== */
+
+.secondary {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	font-family: $default-font-stack;
+
+	figure {
+		height: 100%;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+}
+
+.secondary > header {
+	width: 100%;
+	height: 33%;
+	min-height: 220px;
+	position: relative;
+	display: table;
+	overflow: hidden;
+
+	figure {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.secondary-header {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	z-index: 11;
+
+		h1 {
+			width: 75%;
+			min-width: 308px;
+			margin: 25px auto;
+			//font-family: $headline-font-stack;
+			color: #fff;
+			//font-weight: 100;
+			//letter-spacing: 1px;
+			//font-size: 3em;
+			//line-height: 1;
+			text-align: center;
+			//text-transform: uppercase;
+
+			//margin: 0 0 15px;
+			padding: 0;
+			//color: #ffffff;
+			font-family: "good_headline_procond_medium";
+			font-size: 48px;
+			line-height: 0.85;
+			letter-spacing: 0.035em;
+			font-weight: 100;
+			text-transform: uppercase;
+		}
+
+	.text-columns {
+		/*-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+		-webkit-column-gap: 2em;
+		-moz-column-gap: 2em;
+		column-gap: 2em;*/
+		width: 80%;
+		margin: 0 auto;
+		color: #fff;
+		line-height: 1.5;
+		padding-top: 15px;
+		font-size: 1.2em;
+		text-align: center;
+	}
+
+	.subtitle {
+		margin: 0 auto;
+		color: #fff;
+		line-height: 1.5;
+		padding-top: 15px;
+		font-size: 1.2em;
+		width: 380px;
+		text-align: center;
+	}
+}
+
+.secondary-double {
+	width: 100%;
+	height: 33%;
+	min-height: 220px;
+	position: relative;
+	display: table;
+	float: left;
+	overflow: hidden;
+
+	li {
+		min-width: 250px;
+		overflow: hidden;
+		width: 50%;
+		position: relative;
+		display: table-cell;
+
+		&:hover > .btn-background-container img {
+			@include vendor-prefix('transform', 'scale(1.1)');
+			@include vendor-prefix('transition', '.3s ease-in-out');
+		}
+	
+	}
+
+}
+
+.secondary-single {
+	width: 100%;
+	height: 34%;
+	min-height: 220px;
+	position: relative;
+	display: table;
+	float: left;
+	overflow: hidden;
+
+	li {
+		min-width: 350px;
+		overflow: hidden;
+		width: 100%;
+		position: relative;
+		display: table-cell;
+	}
+
+	img {
+		width: 36%;
+		min-width: 190px;
+	}
+}
+
+.secondary .bottom {
+	height: 34%;
+	min-height: 220px;
+}
+
+.highlight a {
+	min-height: 250px;
+}
+
+// BTN Background Adjustmen
+.btn-background-container {
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		min-width: 675px;
+		height: auto;
+		position: absolute;
+		@include vendor-prefix('transform', 'scale(1)');
+		@include vendor-prefix('transition', '.3s ease-in-out');
+	}
+}
+
+
+// Discover Background Images
+#bg-discover-header {
+	background-image: url('img/headers/bg-discover-header.png');
+	height: 100%;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.discover-title {
+	font-size: 48px;
+	line-height: 0.85;
+	letter-spacing: 0.035em;
+	font-weight: 100;
+	text-transform: uppercase;
+	font-family: $headline-font-stack;
+}
+.bg-discover-story {
+	background-image: url('img/bg-discover-story.png');
+}
+.bg-discover-studio {
+	background-image: url('img/bg-discover-studio.png');
+}
+//Discover slider placeholder
+#discover-photo-slide-1 {
+	background-image: url('img/headers/bg-discover-footer.png');
+}
+
+// Participate Background images
+#bg-participate-header {
+	background-image: url('img/bg-participate-header.png');
+}
+.bg-participate-classes {
+background-image: url('img/bg-participate-classes.png');
+}
+.bg-participate-specialevents {
+background-image: url('img/bg-participate-specialevents.png');
+}
+.bg-participate-throwingdown {
+background-image: url('img/bg-participate-throwingdown.png');
+}
+.bg-participate-studioreservations {
+background-image: url('img/bg-participate-studioreservation.png');
+}

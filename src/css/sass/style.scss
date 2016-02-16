@@ -1,0 +1,91 @@
+/**
+ * styles.scss
+ * ---
+ * Main `sass` file. Import here `sass` files
+ */
+
+// Modules
+@import "modules/variables";
+@import "modules/mixins";
+@import "modules/fonts";
+@import "modules/animations";
+
+// Partials
+@import "partials/wp";
+@import "partials/primary";
+@import "partials/secondary";
+@import "partials/tertiary";
+
+@import "partials/pages";
+@import "partials/calendar";
+@import "partials/slider";
+
+//@import "partials/reset";
+//@import "partials/wordpress";
+//@import "partials/utils";
+//@import "partials/wrapper";
+//@import "partials/header";
+@import "partials/nav";
+//@import "partials/sidebar";
+//@import "partials/footer";
+@import "partials/print";
+
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	background-color: #C2C297;
+	position: absolute; 
+	top: 0;
+	left: 0;
+	//height: 0;
+	right: 0;
+}
+
+
+ // Fixing the Index Page Elements
+ .tile-button-background {
+ 	background-repeat: no-repeat;
+ 	background-position: center;
+ 	background-size: cover;
+ }
+
+
+ #welcomemat {
+ 	background-image: url('img/featureimages/01-pottery_wheel.jpg');
+ }
+
+ .register-for-classes {
+ 	background-image: url('img/highlightimages/highlight-register-full-plain.jpg');
+ }
+
+ .visit-the-studio {
+ 	background-image: url('img/highlightimages/highlight-visit-full-plain.jpg');
+ }
+
+.highlight {
+	-webkit-transition: .3s ease;
+}
+
+.highlight:active, .highlight:hover {
+	//Removed per - https://gitlab.corp.vestadvertising.com/andrews/payne-street-pottery-scaffolding/issues/7
+	background-color: rgba(125, 125, 95, 0.7);
+}
+
+.highlight:hover img {
+	/* //Removed per - https://gitlab.corp.vestadvertising.com/andrews/payne-street-pottery-scaffolding/issues/7	
+	-webkit-animation: flipInY 1s cubic-bezier(0.77,0,.175,1);
+	-moz-animation: flipInY 1s cubic-bezier(0.77,0,.175,1);
+	-o-animation: flipInY 1s cubic-bezier(0.77,0,.175,1);
+	animation: flipInY 1s cubic-bezier(0.77,0,.175,1);
+	*/
+}
+
+.hide {
+	display: none;
+}

@@ -1,0 +1,251 @@
+// Navigation Adjustments per page
+body.about section.primary-nav, body.learn section.primary-nav {
+	min-height: 655px;
+}
+body.events section.primary-nav {
+	min-height: 661px;
+}
+
+/* ====================================================================
+ * supplies-equipment page
+ * ==================================================================== */
+
+.supplies-equipment {
+
+}
+
+
+/* ====================================================================
+ * Discover
+ * ==================================================================== */
+
+.discover > .primary > header {
+	display: table;
+}
+
+
+/* ====================================================================
+ * Shop Template (3 Buttons) 
+ * ==================================================================== */
+
+.triple-btn-block {
+	min-width: 900px !important;
+}
+
+.triple-btn-block .primary-header {
+	position: initial;
+}
+
+header.half {
+	width: 50%;
+	height: 100%;
+	display: table;
+	float: left;
+	min-height: 220px;
+}
+
+.secondary-triple {
+	width: 50%;
+	height: 100%;
+	min-height: 220px;
+	position: relative;
+	//display: table;
+	float: left;
+	overflow: hidden;
+	/* display: block; */
+	float: right;
+
+	li {
+		min-width: 250px;
+		overflow: hidden;
+		width: 100%;
+		position: relative;
+		min-height: 220px;
+		/* display: table-cell; */
+		/* display: inline; */
+		height: 33%;
+		display: block;
+
+		&:hover > .btn-background-container img {
+			@include vendor-prefix('transform', 'scale(1.1)');
+			@include vendor-prefix('transition', '.3s ease-in-out');
+		}
+	}
+
+	li:last-child {
+		height: 34%;
+	}	
+	
+}
+
+ #shopmat {
+ 	background-image: url('img/headers/bg-shop-header.png');
+ 	z-index: -1;
+ }
+
+
+/* ====================================================================
+ * Learn 
+ * ==================================================================== */
+
+
+#bg-learn-header {
+	background-image: url('img/headers/bg-learn-header.jpg');
+	height: 100%;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+/* ====================================================================
+ * Story 
+ * ==================================================================== */
+
+.timeline {
+	li {
+		clear: both;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 10px;
+
+		p {
+			float: left; 
+			margin: 0 0 0 40px;
+		}
+	}
+	.year {
+		color: #fff;
+		position: absolute;
+		top: 0; left: 0;		
+	}
+}
+
+
+/* ====================================================================
+ * Artists 
+ * ==================================================================== */
+.artists .tertiary .slideshow-ctrls {
+	display: none;
+}
+
+#artists-bucket {
+	h2 {
+		cursor: pointer;
+		padding-top: 15px;
+	}
+}
+
+
+
+/* ====================================================================
+ * Calendar 
+ * ==================================================================== */
+
+.single-class {
+
+	.tertiary .description .body {
+		padding-top: 0;
+
+		form {
+			margin-top: 35px;
+			position: initial;
+			width: 100%;
+		}
+	}
+
+
+
+	.eventsCalendar-list {
+		padding: 0;
+		clear: both;
+		border-bottom: 1px solid #3d3630;
+
+		li {
+			overflow: hidden;
+			margin: 0;
+			//clear: both;
+		}
+
+		li:last-child {
+			margin-bottom: 0;
+
+		}
+
+		ul.eventDetails {
+			margin: 0;
+		}
+
+
+	}
+
+	#phone {
+		margin-top: 25px;
+	}
+
+	.availability {
+		margin-top: 45px;
+	}
+
+	#class-registration {
+		padding: 0;
+	}
+
+	.return-to-calendar {
+		margin-bottom: 20px;
+	}
+
+
+	.waitlist-availability {
+		display: none;
+	  padding: 20px 0;
+	  color: #fff;
+	  font-size: 2em;
+	  font-weight: 100;
+	  letter-spacing: 1px;
+	  text-transform: uppercase;
+	}
+
+	#waitlist-registration {
+		padding: 0;
+		display: none;
+		margin-top: 0;
+
+		#wait-name {
+			float: left;
+		}
+
+		#wait-email {
+			float: right;
+		}
+
+		#wait-phone {
+			margin-top: 25px;
+		}
+	}
+
+}
+
+
+/* ====================================================================
+ * Studio 
+ * ==================================================================== */
+
+.about-studio-kilns {
+	li {
+		padding-bottom: 10px;
+
+		p {
+			font-style: italic;
+		}
+
+		.dotw {
+			text-transform: uppercase;
+  			font-size: 24px;
+		}
+	}
+}
+

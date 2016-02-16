@@ -1,0 +1,172 @@
+/* PSP ANIMATIONS */
+
+/* BEFORE */
+#logogroup,
+.logo,
+.mainmenu, 
+.mainmenu ul,
+.submenu,
+#headerfooter,
+#bottom figure img,
+.highlight img	{transition:ease .5s;}
+
+	
+		
+	/* Submenus Fade-in:Before  */
+	.submenu ul,
+	.open-menu .sublogo,
+	.open-menu #headerfooter {
+		opacity: 0;
+		
+			-webkit-animation: fadeout .5s; /* Safari, Chrome and Opera > 12.1 */
+			   -moz-animation: fadeout .5s; /* Firefox < 16 */
+				-ms-animation: fadeout .5s; /* Internet Explorer */
+				 -o-animation: fadeout .5s; /* Opera < 12.1 */
+					animation: fadeout .5s;
+				}
+
+
+/* AFTER */
+.open-menu #logogroup,
+.open-menu .logo, 
+.open-menu .mainmenu, 
+.open-menu .mainmenu ul,  
+.open-menu .submenu,
+.open-menu #headerfooter	{transition:ease .5s;} 
+	
+	/* Submenus Fade-in:After  */
+	li.active .submenu ul,
+	.sublogo
+	#headerfooter {
+		opacity: 1;
+	  
+			-webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
+			   -moz-animation: fadein .5s; /* Firefox < 16 */
+				-ms-animation: fadein .5s; /* Internet Explorer */
+				 -o-animation: fadein .5s; /* Opera < 12.1 */
+					animation: fadein .5s;
+			}
+
+
+
+/* FADEIN ANIMATION */
+@keyframes fadein {			from { opacity: 0; } to { opacity: 1; }}
+@-moz-keyframes fadein {	from { opacity: 0; } to { opacity: 1; }}		/* Firefox < 16 */
+@-webkit-keyframes fadein {	from { opacity: 0; } to { opacity: 1; }}		/* Safari, Chrome and Opera > 12.1 */
+@-ms-keyframes fadein {		from { opacity: 0; } to { opacity: 1; }}		/* Internet Explorer */
+@-o-keyframes fadein {		from { opacity: 0; } to { opacity: 1; }}  	/* Opera < 12.1 */
+
+/* FADEOUT ANIMATION */
+@keyframes fadeout {		from { opacity: 1; } to { opacity: 0; }}
+@-moz-keyframes fadeout {	from { opacity: 1; } to { opacity: 0; }}		/* Firefox < 16 */
+@-webkit-keyframes fadeout {from { opacity: 1; } to { opacity: 0; }}		/* Safari, Chrome and Opera > 12.1 */
+@-ms-keyframes fadeout {	from { opacity: 1; } to { opacity: 0; }}		/* Internet Explorer */
+@-o-keyframes fadeout {		from { opacity: 1; } to { opacity: 0; }}		/* Opera < 12.1 */  
+
+@-webkit-keyframes flipInY {
+    0% {
+        -webkit-transform: perspective(400px) rotateY(90deg);
+        transform: perspective(400px) rotateY(90deg);
+        
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotateY(-10deg);
+        transform: perspective(400px) rotateY(-10deg);
+    }
+
+    70% {
+        -webkit-transform: perspective(400px) rotateY(10deg);
+        transform: perspective(400px) rotateY(10deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(400px) rotateY(0deg);
+        transform: perspective(400px) rotateY(0deg);
+       
+    }
+}
+
+@keyframes flipInY {
+    0% {
+        -webkit-transform: perspective(400px) rotateY(90deg);
+        -ms-transform: perspective(400px) rotateY(90deg);
+        transform: perspective(400px) rotateY(90deg);
+        
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotateY(-10deg);
+        -ms-transform: perspective(400px) rotateY(-10deg);
+        transform: perspective(400px) rotateY(-10deg);
+    }
+
+    70% {
+        -webkit-transform: perspective(400px) rotateY(10deg);
+        -ms-transform: perspective(400px) rotateY(10deg);
+        transform: perspective(400px) rotateY(10deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(400px) rotateY(0deg);
+        -ms-transform: perspective(400px) rotateY(0deg);
+        transform: perspective(400px) rotateY(0deg);
+        
+    }
+}
+
+@-webkit-keyframes float {
+    0% {
+        -webkit-transform: translatey(10px);
+    }
+
+    50% {
+        -webkit-transform: translatey(-10px);
+    }
+
+    100% {
+        -webkit-transform: translatey(10px);
+    }
+}
+
+@-moz-keyframes float {
+    0% {
+        -moz-transform: translatey(10px);
+    }
+
+    50% {
+        -moz-transform: translatey(-10px);
+    }
+
+    100% {
+        -moz-transform: translatey(10px);
+    }
+}
+
+@-o-keyframes float {
+    0% {
+        -o-transform: translatey(10px);
+    }
+
+    50% {
+        -o-transform: translatey(-10px);
+    }
+
+    100% {
+        -o-transform: translatey(10px);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(10px);
+    }
+
+    50% {
+        transform: translatey(-10px);
+    }
+
+    100% {
+        transform: translatey(10px);
+    }
+}

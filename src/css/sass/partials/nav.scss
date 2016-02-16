@@ -1,0 +1,359 @@
+/**
+ * partials/nav
+ * ---
+ * Menus
+ */
+
+/* ====================================================================
+ * Navigation
+ * ==================================================================== */
+
+$child-container-length: 170px;
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+section.primary-nav {
+	width: 400px;
+	//position: fixed;
+	position: absolute;
+	min-height: 650px;
+	height: 100%;
+	z-index: 99;
+	background-image: url("img/bg-header.png");
+	background-size: cover;
+	overflow: hidden;
+
+	&:hover.nav-container {
+		//display: none;
+	}
+}
+
+.logo {
+	position: absolute;
+	z-index: 1;
+	width: 280px;
+
+	.logo-title {
+		width: 80%;
+		margin: 25% auto 0 auto;
+		img {
+			width: 225px;
+			@include vendor-prefix('transition', '.5s ease');			
+		}
+	}
+	p {
+		padding-top: 15px;		
+		border-top: solid 1px #fff;
+		width: 50%;
+		margin: 0 auto;
+		margin-top: 10px;
+		text-align: center;
+		color: #ffffff;
+		font-family: "good_headline_procond_book";
+		font-size: 22px;
+		white-space: nowrap;
+		opacity: 1;
+		@include vendor-prefix('transition', '.3s ease');
+	}
+}
+
+.logo-pull-left {
+	width: 170px;
+
+	.logo-title {
+
+		img {
+			width: 150px !important;
+		}
+	}
+	
+	p {
+		opacity: 0;
+	}
+} 
+
+.nav-container {
+	display: inline-block;
+	float: right;
+	height: 100%;
+	background: #f7f7f7;
+	width: 120px;
+	@include vendor-prefix('transition', '.5s ease');
+	background-image: url("img/bg-menu.png");
+	overflow: hidden;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		@include vendor-prefix('transition', '.5s ease');
+	}
+
+	&:hover {
+		width: 60px;
+		
+		.nav-parent a h2{
+			display: none;
+			@include vendor-prefix('transition', '.5s ease');		
+		}
+
+		.nav-parent {
+			width: 60px;
+			background-size: 72% !important;	
+		}
+
+		ul {
+			width: $child-container-length;
+			margin-right: 0 !important;
+			//visibility: hidden;
+			display: none;
+			
+			li {
+				opacity: 0;
+			}
+		}
+
+
+	}
+
+	.nav-parent {
+		width: 120px;
+		height: 100% !important;
+		@include vendor-prefix('transition', '.5s ease');
+		height: 25%;
+
+
+		.nav-title {
+			position: relative;
+			height: 100%;
+			width: 100%;			
+			display: table;
+			vertical-align: middle;
+			text-align: center;
+			color: #ffffff;
+			font-family: "good_headline_procond_book";
+			font-size: 18px;
+			text-transform: uppercase;
+			text-decoration: none;
+
+			h2 {
+				margin: 0;
+				padding: 0;
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+			}
+		}
+
+		&:hover {
+
+			//Trying to fix the yellow bg shit
+			.nav-title{
+				//background: url("http://paynestreetpottery.local:8888/wp-content/themes/paynestreetpottery/src/img/nav-icons/discover-hover.png") no-repeat center center !important;
+  				//background-size: 42px !important;
+			}
+
+			background-size: 43px !important;
+			
+
+			.nav-parent {
+				//background-size: 70% !important;
+				background-size: 30% !important;
+				//background-size: 47px !important;	
+			}
+
+			.vase-ico {
+				background: rgba(247, 232, 127, 0.38) url("img/nav-icons/discover-hover.png") no-repeat center center !important;
+				background-size: 42px !important;	
+			}
+			// &:first-child {
+			// 	//background: rgba(255, 245, 144, 0.27) url("http://paynestreetpottery.staging.vestadvertising.com/css/../images/menu-discover-icon-active.png") no-repeat center center !important;
+			// 	background: rgba(247, 232, 127, 0.38) url("img/nav-icons/discover-hover.png") no-repeat center center !important;
+			// 	background-size: 42px !important;	
+			// 	//background: url("http://paynestreetpottery.local:8888/wp-content/themes/paynestreetpottery/src/img/bg-menu-active.png") no-repeat center center !important;
+			// 	//background-size: 100% 100% !important;
+
+			// 	//background: transparent url("http://paynestreetpottery.staging.vestadvertising.com/css/../images/bg-menu-active.png") no-repeat center center !important;
+			// }
+			// &:nth-child(2) {
+			// 	background: rgba(247, 232, 127, 0.38) url("img/nav-icons/participate-hover.png") no-repeat center center !important;		
+			// 	background-size: 42px !important;	
+			// }
+			// &:nth-child(3) {
+			// 	background: rgba(247, 232, 127, 0.38) url("img/nav-icons/shop-hover.png") no-repeat center center !important;		
+			// 	background-size: 42px !important;	
+			// }
+			// &:last-child {
+			// 	background: rgba(247, 232, 127, 0.38) url("img/nav-icons/learn-hover.png") no-repeat center center !important;		
+			// 	background-size: 42px !important;	
+			// 	//background: transparent url("http://paynestreetpottery.staging.vestadvertising.com/css/../images/bg-menu-active.png") no-repeat center center !important;
+			// }
+
+			.nav-child ul {
+				width: $child-container-length;
+				margin-right: 0;
+				//visibility: visible;
+				display: block;
+				
+				li {
+					display: inherit;
+					opacity: 1;
+					@include vendor-prefix('transition', '.5s ease');
+				}
+			}
+
+			.nav-child ul:hover {
+				width: $child-container-length;
+				margin-right: 0;
+			}						
+		}
+
+
+
+		.nav-child {			
+			position: absolute;
+			top: 0;
+			z-index: -1;
+			width: 0;
+			height: 100%;
+			float: right;
+			@include vendor-prefix('transition', '.5s ease');
+			
+
+			ul {
+				background: #3D3630;				
+				height: 100%;
+				float: right;
+				@include vendor-prefix('transition', '.5s ease');
+				overflow: hidden;
+
+				//new
+				width: $child-container-length;
+				margin-right: -170px;
+
+
+				li {
+					color: #ffffff;
+					font-family: "good_headline_procond_book";
+					font-size: 18px;
+					text-transform: uppercase;
+					text-decoration: none;
+					text-align: center;
+					display: none;
+					@include vendor-prefix('transition', '.5s ease');
+					width: 85%;
+					margin: 0 auto;
+
+					a {
+						padding: 25px;
+						display: block;		
+						cursor: pointer;				
+
+						&:hover {
+							color: #dcaf62;
+						}
+					}
+
+				}	
+
+				li:after {
+					content: '';
+					height: 2px;
+					background: transparent url("img/border-submenu.png") repeat-x 0 0;
+					display: block;
+					position: relative;
+					top: 1px;
+				}
+
+				li:last-child:after {
+					background: none;
+				}
+
+				a {
+					text-decoration: none;
+					color: inherit;
+					margin: 0;
+					padding: 0;
+				}	
+
+				h3 {
+					padding: 75px 0;
+
+
+				}						
+			}
+
+		}
+	}
+
+	.nav-parent:after {
+		content: '';
+		height: 2px;
+		background: transparent url("img/border-menu.png") repeat-x 0 0;
+		display: block;
+		position: relative;
+		bottom: 1px;
+	}
+
+	.nav-parent:last-child:after {
+		//background: none;
+	}
+
+}
+
+#headerfooter {
+	@include vendor-prefix('transition', '.3s ease');
+	display: block;
+	margin: inherit;
+	opacity: 1;
+}
+
+.fadeOut-headerfooter {
+	//display: none !important;
+	opacity: 0 !important;
+	margin-left: -200px !important;
+}
+
+
+.bg-hover {
+	height: 25%;
+}
+
+.bg-hover-yellow {
+	background: url('img/bg-menu-active.png');
+
+	.nav-title {
+		background-size: 42px !important;	
+	}
+
+	.vase-ico .nav-title {
+		background:url("img/nav-icons/discover-hover.png") no-repeat center center !important;
+		background-size: 42px !important;	
+	}
+
+	.calendar-ico .nav-title {
+		background:url("img/nav-icons/participate-hover.png") no-repeat center center !important;		
+		background-size: 42px !important;	
+	}
+
+	.bag-ico .nav-title {
+		background:url("img/nav-icons/shop-hover.png") no-repeat center center !important;		
+		background-size: 42px !important;
+	}
+
+	.wheel-ico .nav-title {
+			background:url("img/nav-icons/learn-hover.png") no-repeat center center !important;		
+			background-size: 42px !important;
+	}
+}
+
+.active-nav {
+	.nav-title {
+		background-size: 42px !important;	
+	}
+}
